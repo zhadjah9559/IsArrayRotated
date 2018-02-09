@@ -22,11 +22,11 @@ public class IsArrayRotated
         boolean rotation;
         
         System.out.println("This program takes two arrays, compares them, and "
-                + "determines whether the original array has been rotated and put "
-                + "into another array. \nWatch what happens when the original "
-                + "array = [0,1,2,3,4,5,6,7,8,9] is compared to an array  with contents: \n"
-                + "[9,7,5,3,1,8,6,4,2,0]");
-        
+        + "determines whether the original array has been rotated and put "
+        + "into another array. \nWatch what happens when the original "
+        + "array = [0,1,2,3,4,5,6,7,8,9] is compared to an array  with contents: \n"
+        + "[9,7,5,3,1,8,6,4,2,0]");
+
         rotation = isRotated(original, rotatedArray);
         if(rotation == true)
         {
