@@ -9,6 +9,9 @@ the same size for the elements. It will then check whether the array has been
 rotated by checking the elements of the original from the first element to the 
 last, while the other array will be checked from the last element up until the 
 first.
+
+Coming Additions:
+I plan to implement a unit test for the isRotated Method
 ==============================================================================*/
 package isarrayrotated;
 public class IsArrayRotated 
