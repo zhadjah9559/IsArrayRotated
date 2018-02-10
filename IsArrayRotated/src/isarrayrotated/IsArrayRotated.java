@@ -4,7 +4,7 @@ Junior Year                         Side Project
 
 Description:
 This program will take two array, one original and one array that will be compared 
-to the original. The isRotated function will check to see if the length are both 
+to the original. The isRotated function will check to see if the lengths are both 
 the same size for the elements. It will then check whether the array has been
 rotated by checking the elements of the original from the first element to the 
 last, while the other array will be checked from the last element up until the 
@@ -14,6 +14,10 @@ package isarrayrotated;
 public class IsArrayRotated 
 {
 
+    /**
+     * 
+     * @param args 
+     */
     public static void main(String[] args) 
     {
         int[] original = {0,1,2,3,4,5,6,7,8,9};
@@ -47,6 +51,12 @@ public class IsArrayRotated
         }
     }
     
+    /**
+     * 
+     * @param original
+     * @param tempArray
+     * @return isRotated
+     */
     public static boolean isRotated(int[] original, int[] tempArray)
     {
         boolean isRotated = true;
@@ -57,6 +67,7 @@ public class IsArrayRotated
             //loop to find all elements of original
             for(int i= 0; i<original.length;i++)
             {
+                //compare element in original array to element in tempArray
                 if(original[i] != tempArray[tempArray.length - inc])
                 {
                     isRotated = false;
