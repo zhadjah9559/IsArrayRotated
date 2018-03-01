@@ -9,30 +9,37 @@ the same size for the elements. It will then check whether the array has been
 rotated by checking the elements of the original from the first element to the 
 last, while the other array will be checked from the last element up until the 
 first.
-
-Coming Additions:
-I plan to implement a unit test for the isRotated Method
 ==============================================================================*/
 package isarrayrotated;
+
+import java.util.Scanner;
+
 public class IsArrayRotated 
 {
-
     /**
      * 
      * @param args 
      */
     public static void main(String[] args) 
     {
-        int[] original = {0,1,2,3,4,5,6,7,8,9};
-        int[] notRotated = {9,7,5,3,1,8,6,4,2,0};
-        int[] rotatedArray = {9,8,7,6,5,4,3,2,1,0}; 
-        boolean rotation;
+        Scanner scan = new Scanner(System.in);
+        //int[] arrayA = new int[10];
         
         System.out.println("This program takes two arrays, compares them, and "
         + "determines whether the original array has been rotated and put "
         + "into another array. \nWatch what happens when the original "
         + "array = [0,1,2,3,4,5,6,7,8,9] is compared to an array  with contents: \n"
         + "[9,7,5,3,1,8,6,4,2,0]");
+        
+        
+        
+        
+        int[] original = {0,1,2,3,4,5,6,7,8,9};
+        int[] notRotated = {9,7,5,3,1,8,6,4,2,0};
+        int[] rotatedArray = {9,8,7,6,5,4,3,2,1,0}; 
+        boolean rotation;
+        
+        
 
         rotation = isRotated(original, rotatedArray);
         if(rotation == true)
@@ -53,6 +60,17 @@ public class IsArrayRotated
             System.out.println("The original array has not been rotated");
         }
     }
+    
+    /**
+     * 
+     * @param original
+     * @param tempArray 
+     */
+    public static void rotateArray(int[] original, int[] tempArray)
+    {
+        
+    }
+    
     
     /**
      * 
@@ -81,4 +99,6 @@ public class IsArrayRotated
         }
         return isRotated;
     }
+    
+    
 }
