@@ -79,7 +79,7 @@ public class IsArrayRotated
      */
     public static int[] rotateArray(int[] userArray)
     {        
-        return userArray;
+        //return userArray;
     }
     
     
