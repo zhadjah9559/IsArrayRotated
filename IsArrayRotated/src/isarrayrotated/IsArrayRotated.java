@@ -12,6 +12,7 @@ first.
 ==============================================================================*/
 package isarrayrotated;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class IsArrayRotated 
@@ -23,16 +24,12 @@ public class IsArrayRotated
     public static void main(String[] args) 
     {
         Scanner scan = new Scanner(System.in);
-        //int[] arrayA = new int[10];
         
         System.out.println("This program takes two arrays, compares them, and "
         + "determines whether the original array has been rotated and put "
         + "into another array. \nWatch what happens when the original "
         + "array = [0,1,2,3,4,5,6,7,8,9] is compared to an array  with contents: \n"
         + "[9,7,5,3,1,8,6,4,2,0]");
-        
-        
-        
         
         int[] original = {0,1,2,3,4,5,6,7,8,9};
         int[] notRotated = {9,7,5,3,1,8,6,4,2,0};
@@ -59,6 +56,20 @@ public class IsArrayRotated
         }else{
             System.out.println("The original array has not been rotated");
         }
+        
+        
+        //user enters array and will get rotated
+        int[] userArray = new int[10];
+        
+        System.out.println("Enter ten numbers");
+        for(int i = 0; i<userArray.length; i++)
+        {
+            userArray[i] = scan.nextInt();
+        }
+        
+        System.out.println("The array you entered is: " + Arrays.toString(userArray) +"\n"+
+                           "When your array is rotated, it looks like this: \n"+ 
+                           rotateArray(userArray));
     }
     
     /**
@@ -66,9 +77,9 @@ public class IsArrayRotated
      * @param original
      * @param tempArray 
      */
-    public static void rotateArray(int[] original, int[] tempArray)
-    {
-        
+    public static int[] rotateArray(int[] userArray)
+    {        
+        return userArray;
     }
     
     
