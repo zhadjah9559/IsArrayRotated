@@ -91,8 +91,6 @@ public class IsArrayRotated
     //Will rotate the array that the user entered 
     public static int[] rotateArray(int[] userArray)
     {    
-        int head = 0;
-        int tail = 0;
         int replace = 0;
         int inc = 1;
         
