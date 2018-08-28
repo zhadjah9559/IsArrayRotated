@@ -52,10 +52,10 @@ public class IsArrayRotated
         }
         
         //user will enter array and will get rotated
-        int[] userArray = new int[10];
+        int[] userArray = new int[9];
         
         System.out.println("This program can also rotate arrays.\n" +
-                           "Enter 10 single digit integers separated by spaces");
+                           "Enter 9 single digit integers separated by spaces");
         for(int i = 0; i<userArray.length; i++)
         {
             userArray[i] = scan.nextInt();
@@ -94,17 +94,27 @@ public class IsArrayRotated
         int replace = 0;
         int inc = 1;
         
-        //if number of elements equals are even
+        //if number of elements equals an even number
         if(userArray.length % 2 == 0)
         {
             for(int i = 0; i < (userArray.length /2);i++)
             {
-                //head = userArray[i];
-                //tail = userArray.length - inc;   //dont forget to increment inc
                 replace = userArray[i];
                 userArray[i] = userArray.length - inc;
                 userArray[userArray.length - inc] = replace;
                 inc++;
+            }
+        }
+        
+        //if number of elements equals an odd number
+        else
+        {
+            for(int i = 0; i<(userArray.length/2) ;i++ )
+            {
+               replace = userArray[i];
+               userArray[i] = userArray.length - inc;
+               userArray[userArray.length - inc] = replace;
+               inc++; 
             }
         }
         return userArray;
