@@ -109,12 +109,12 @@ public class IsArrayRotated
         //if number of elements equals an odd number
         else
         {
-            for(int i = 0; i<(userArray.length/2) ;i++ )
+            for (int i = 0; i <(userArray.length/2) ; i++) 
             {
-               replace = userArray[i];
-               userArray[i] = userArray.length - inc;
-               userArray[userArray.length - inc] = replace;
-               inc++; 
+                replace=userArray[i];
+                userArray[i]=userArray[userArray.length-inc];
+                userArray[userArray.length-inc]=replace;
+                inc++;
             }
         }
         return userArray;
